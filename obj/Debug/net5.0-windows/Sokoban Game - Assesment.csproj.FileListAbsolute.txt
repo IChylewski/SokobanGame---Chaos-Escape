@@ -1,0 +1,32 @@
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.csproj.AssemblyReference.cache
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment_MarkupCompile.cache
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment_MarkupCompile.lref
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.dll
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\ref\Sokoban Game - Assesment.dll
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.pdb
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.exe
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.deps.json
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.runtimeconfig.json
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.runtimeconfig.dev.json
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.dll
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\ref\Sokoban Game - Assesment.dll
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Sokoban Game - Assesment.pdb
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.g.resources
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.AssemblyInfoInputs.cache
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.AssemblyInfo.cs
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.csproj.CoreCompileInputs.cache
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment.genruntimeconfig.cache
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Logo\Logo.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Sokoban Game - Assesment_Content.g.cs
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Background\MenuBackground.jpg
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Levels\Level1.g.cs
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\obj\Debug\net5.0-windows\Levels\Level1.baml
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Walls\block_02.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Walls\block_01.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Ground\ground_01.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Ground\ground_02.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Player\Player.png

@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Sokoban_Game___Assesment</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Background\MenuBackground.jpg" />
+    <None Remove="Assets\Fonts\futura medium bt.ttf" />
+    <None Remove="Assets\Game\Ground\ground_01.png" />
+    <None Remove="Assets\Game\Ground\ground_02.png" />
+    <None Remove="Assets\Game\Player\Player.png" />
+    <None Remove="Assets\Game\Walls\block_01.png" />
+    <None Remove="Assets\Game\Walls\block_02.png" />
+    <None Remove="Assets\Logo\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Background\MenuBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Ground\ground_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Ground\ground_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Player\Player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Walls\block_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Logo\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\futura medium bt.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Assets\Game\Walls\block_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
