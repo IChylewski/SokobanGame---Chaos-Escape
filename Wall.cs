@@ -8,18 +8,20 @@ using System.Windows.Media.Imaging;
 
 namespace Sokoban_Game___Assesment
 {
+    /*
+     This is wall class that is responsible for loading Wall's images from the folder and using them to construct wall object
+     */
     public class Wall
     {
-        private List<Image> WallImages = new List<Image>();
-        public Image Block { get; set; }
-        public bool CanStepOn = false;
-        public Wall(int wallID)
+        private List<Image> WallImages = new List<Image>();  // Stores all of images from the folder
+        public Image Block { get; set; }         // Stores the wall image chosen for specific object
+        public Wall(int wallID)             // Constructor that has ID parameter that allows to create wall object with specific image of the wall
         {
             LoadResources();
             Block = WallImages[wallID];
-            Block.Stretch = System.Windows.Media.Stretch.Fill;
+            Block.Stretch = System.Windows.Media.Stretch.Fill;  // Changes image property so image fills entire grid block
         }
-        private void LoadResources()
+        private void LoadResources()        // Method that loads all images from the folder
         {
             for (int i = 1; i < 4; i++)
             {
