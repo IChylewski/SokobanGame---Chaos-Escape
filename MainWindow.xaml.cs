@@ -26,7 +26,7 @@ namespace Sokoban_Game_Assesment
             InitializeComponent();
         }
 
-        public void StartGameBtnClick(object sender, RoutedEventArgs e)
+        public void StartGameBtnClick(object sender, RoutedEventArgs e)  // Closes this window and opens new one on button click
         {
             Level1 Level1Window = new Level1();
             Level1Window.Show();
