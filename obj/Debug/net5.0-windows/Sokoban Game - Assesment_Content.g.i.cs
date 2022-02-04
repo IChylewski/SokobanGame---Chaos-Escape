@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/background/menubackground.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/crates/crate_01.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/crates/crate_02.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/crates/crate_03.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/ground/ground_01.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/ground/ground_02.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/game/player/player.png")]

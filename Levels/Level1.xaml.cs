@@ -1,4 +1,5 @@
 ﻿using Sokoban_Game___Assesment;
+using Sokoban_Game___Assesment.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Sokoban_Game_Assesment.Levels
         public Wall WallBlock { get; set; }         // Reference to the object of type Wall
         public Floor FloorBlock { get; set; }        // Reference to the object of type Floor
         public Player Character { get; set; }         // Reference to the object of type Player
+        public Crate CrateBlock { get; set; }         // Reference to the object of type Crate
         private int[,] ExteriorWallsCords { get; set; }   // 2D Array that stores Exterior Wall Coordinates (Always the same) { x,y }, { x,y }
         private int[,] InteriorWallsCords { get; set; }   // 2D Array that stores Interior Wall Coordinates (Always the same) { x,y }, { x,y }
         public Level1()
@@ -61,7 +63,8 @@ namespace Sokoban_Game_Assesment.Levels
                 Grid.SetRow(WallBlock.Block, InteriorWallsCords[y, 1]);
             }
 
-            SpawnPlayer();             
+            SpawnPlayer();
+            SpawnCrate();
 
         }
         
@@ -82,8 +85,15 @@ namespace Sokoban_Game_Assesment.Levels
         {
             Character = new Player(new int[] { 9, 7 }); // Creates instance of class Player and sets its coordinates
             this.GameGrid.Children.Add(Character.PlayerImg);          // Player added to the grid
-            Grid.SetColumn(Character.PlayerImg, Character.PlayerCords[0]);  // And it is postion is set using its coords
+            Grid.SetColumn(Character.PlayerImg, Character.PlayerCords[0]);  // And its postion is set using its coords
             Grid.SetRow(Character.PlayerImg, Character.PlayerCords[1]);
+        }
+        private void SpawnCrate()
+        {
+            CrateBlock = new Crate(0 ,new int[] { 9, 6 });   // Creates instance of class Crate and sets its coordinates
+            this.GameGrid.Children.Add(CrateBlock.CrateImg);     // Crate added to the grid
+            Grid.SetColumn(CrateBlock.CrateImg, CrateBlock.CrateCords[0]);  // And its postion is set using its coords
+            Grid.SetRow(CrateBlock.CrateImg, CrateBlock.CrateCords[1]);
         }
         private void SetupEvents()   // Method that assigns all event handlers
         {
@@ -94,26 +104,47 @@ namespace Sokoban_Game_Assesment.Levels
 
             Character.Movement(e);              // Changes player coordinates to new postion but not moving it yet
 
-            bool blocked = false;      // It is flag that indicates if targeted tile is wall or not
+            bool charBlocked = false;      // It is flag that indicates if targeted tile is wall or not
+            bool cratePushed = false;      // It is flag that indicates if the crate should be pushed
+            bool crateBlocked = false;     // It is flag that indicates if the crate has been blocked by wall
+            bool crateInEndpoint = false;  // It is flag that indicates if the crate has been delivered to the endpoint
 
-            for(int i = 0; i < 40; i++)
+            
+            if (CrateBlock.CrateCords[0] == Character.PlayerCords[0] && CrateBlock.CrateCords[1] == Character.PlayerCords[1])
             {
-                if(ExteriorWallsCords[i, 0] == Character.PlayerCords[0] && ExteriorWallsCords[i, 1] == Character.PlayerCords[1])
+                cratePushed = true;
+                CrateBlock.Movement(e);
+            }
+
+            // Checks arrays storing wall coordinates to check if target tile is wall or not
+
+            for (int i = 0; i < 40; i++)
+            {
+                if(ExteriorWallsCords[i, 0] == Character.PlayerCords[0] && ExteriorWallsCords[i, 1] == Character.PlayerCords[1]) // checks for player
                 {
-                    blocked = true;
+                    charBlocked = true;
                 }
-            }    // Checks arrays storing wall coordinates to check if target tile is a wall or not
+                if (ExteriorWallsCords[i, 0] == CrateBlock.CrateCords[0] && ExteriorWallsCords[i, 1] == CrateBlock.CrateCords[1])  // checks for crate
+                {
+                    crateBlocked = true;
+                }
+            }    
             for (int x = 0; x < 14; x++)
             {
                 if (InteriorWallsCords[x, 0] == Character.PlayerCords[0] && InteriorWallsCords[x, 1] == Character.PlayerCords[1])
                 {
-                    blocked = true;
+                    charBlocked = true;
+                }
+                if (InteriorWallsCords[x, 0] == CrateBlock.CrateCords[0] && InteriorWallsCords[x, 1] == CrateBlock.CrateCords[1])
+                {
+                    crateBlocked = true;
                 }
             }
 
-            if(blocked == true)       // If target tile is a wall changes back player coordinates
+
+            if (charBlocked == true)       // If target tile is a wall changes back player coordinates
             {
-                switch(e.Key)
+                switch (e.Key)
                 {
                     case Key.Up: Character.PlayerCords[1] += 1; break;
                     case Key.Down: Character.PlayerCords[1] -= 1; break;
@@ -121,9 +152,48 @@ namespace Sokoban_Game_Assesment.Levels
                     case Key.Right: Character.PlayerCords[0] -= 1; break;
                 }
             }
-            else           // If target tile is not a wall leaves changed coordinates and moves character to target tile
+            else if (crateBlocked == true)  // if the crate is blocked changes coordinates of both player and crate
             {
+                switch (e.Key)
+                {
+                    case Key.Up:
+                        {
+                            CrateBlock.CrateCords[1] += 1;
+                            Character.PlayerCords[1] += 1;
+                            break;
+                        }
+                        
+                    case Key.Down:
+                        {
+                            CrateBlock.CrateCords[1] -= 1;
+                            Character.PlayerCords[1] -= 1;
+                            break;
+                        }
+                         
+                    case Key.Left:
+                        {
+                            CrateBlock.CrateCords[0] += 1;
+                            Character.PlayerCords[0] += 1;
+                            break;
+                        } 
+                    case Key.Right:
+                        {
+                            CrateBlock.CrateCords[0] -= 1;
+                            Character.PlayerCords[0] -= 1;
+                            break;
+                        } 
+                }
+            }
+            else if (charBlocked == false && cratePushed == true)       // If target tile is not a wall or crate is not blocked
+            {                                                           // leaves changed coordinates and moves character and crate to target tile
                 Grid.SetColumn(Character.PlayerImg, Character.PlayerCords[0]);
+                Grid.SetRow(Character.PlayerImg, Character.PlayerCords[1]);
+                Grid.SetColumn(CrateBlock.CrateImg, CrateBlock.CrateCords[0]);
+                Grid.SetRow(CrateBlock.CrateImg, CrateBlock.CrateCords[1]);
+            }
+            else
+            {
+                Grid.SetColumn(Character.PlayerImg, Character.PlayerCords[0]);      // if crate is not pushed and player not blocked moves just player
                 Grid.SetRow(Character.PlayerImg, Character.PlayerCords[1]);
             }
 

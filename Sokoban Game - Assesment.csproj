@@ -10,6 +10,9 @@
   <ItemGroup>
     <None Remove="Assets\Background\MenuBackground.jpg" />
     <None Remove="Assets\Fonts\futura medium bt.ttf" />
+    <None Remove="Assets\Game\Crates\crate_01.png" />
+    <None Remove="Assets\Game\Crates\crate_02.png" />
+    <None Remove="Assets\Game\Crates\crate_03.png" />
     <None Remove="Assets\Game\Ground\ground_01.png" />
     <None Remove="Assets\Game\Ground\ground_02.png" />
     <None Remove="Assets\Game\Player\Player.png" />
@@ -20,6 +23,15 @@
 
   <ItemGroup>
     <Content Include="Assets\Background\MenuBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Crates\crate_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Crates\crate_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Crates\crate_03.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Game\Ground\ground_01.png">
