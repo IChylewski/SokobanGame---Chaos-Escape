@@ -13,6 +13,7 @@
     <None Remove="Assets\Game\Crates\crate_01.png" />
     <None Remove="Assets\Game\Crates\crate_02.png" />
     <None Remove="Assets\Game\Crates\crate_03.png" />
+    <None Remove="Assets\Game\Endpoint\endpoint_01.png" />
     <None Remove="Assets\Game\Ground\ground_01.png" />
     <None Remove="Assets\Game\Ground\ground_02.png" />
     <None Remove="Assets\Game\Player\Player.png" />
@@ -32,6 +33,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Game\Crates\crate_03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Game\Endpoint\endpoint_01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Game\Ground\ground_01.png">

@@ -26,6 +26,7 @@ namespace Sokoban_Game_Assesment.Levels
         public Floor FloorBlock { get; set; }        // Reference to the object of type Floor
         public Player Character { get; set; }         // Reference to the object of type Player
         public Crate CrateBlock { get; set; }         // Reference to the object of type Crate
+        public Endpoint EndpointBlock { get; set; }
         private int[,] ExteriorWallsCords { get; set; }   // 2D Array that stores Exterior Wall Coordinates (Always the same) { x,y }, { x,y }
         private int[,] InteriorWallsCords { get; set; }   // 2D Array that stores Interior Wall Coordinates (Always the same) { x,y }, { x,y }
         public Level1()
@@ -64,8 +65,8 @@ namespace Sokoban_Game_Assesment.Levels
             }
 
             SpawnPlayer();
+            SpawnEndpoint();
             SpawnCrate();
-
         }
         
         private void FillWithFloor()
@@ -95,6 +96,13 @@ namespace Sokoban_Game_Assesment.Levels
             Grid.SetColumn(CrateBlock.CrateImg, CrateBlock.CrateCords[0]);  // And its postion is set using its coords
             Grid.SetRow(CrateBlock.CrateImg, CrateBlock.CrateCords[1]);
         }
+        private void SpawnEndpoint()
+        {
+            EndpointBlock = new Endpoint( new int[] { 1, 8 });   // Creates instance of class Endpoint and sets its coordinates
+            this.GameGrid.Children.Add(EndpointBlock.EndpointImg);     // Endpoint added to the grid
+            Grid.SetColumn(EndpointBlock.EndpointImg, EndpointBlock.EndpointCords[0]);  // And its position is set using its coords
+            Grid.SetRow(EndpointBlock.EndpointImg, EndpointBlock.EndpointCords[1]);
+        }
         private void SetupEvents()   // Method that assigns all event handlers
         {
             GameGrid.KeyDown += Movement;
@@ -107,13 +115,18 @@ namespace Sokoban_Game_Assesment.Levels
             bool charBlocked = false;      // It is flag that indicates if targeted tile is wall or not
             bool cratePushed = false;      // It is flag that indicates if the crate should be pushed
             bool crateBlocked = false;     // It is flag that indicates if the crate has been blocked by wall
-            bool crateInEndpoint = false;  // It is flag that indicates if the crate has been delivered to the endpoint
+            bool endpointAchieved = false;  // It is flag that indicates if the crate has been delivered to the endpoint
 
             
             if (CrateBlock.CrateCords[0] == Character.PlayerCords[0] && CrateBlock.CrateCords[1] == Character.PlayerCords[1])
             {
                 cratePushed = true;
                 CrateBlock.Movement(e);
+
+                if(CrateBlock.CrateCords[0] == EndpointBlock.EndpointCords[0] && CrateBlock.CrateCords[1] == EndpointBlock.EndpointCords[1])
+                {
+                    endpointAchieved = true;
+                }
             }
 
             // Checks arrays storing wall coordinates to check if target tile is wall or not
@@ -197,7 +210,16 @@ namespace Sokoban_Game_Assesment.Levels
                 Grid.SetRow(Character.PlayerImg, Character.PlayerCords[1]);
             }
 
+            if(endpointAchieved)
+            {
+                GameOver();
+            }
+
             
+        }
+        private void GameOver()
+        {
+            MessageBox.Show("Congratulations!!! You win!!!");
         }
     }
 }

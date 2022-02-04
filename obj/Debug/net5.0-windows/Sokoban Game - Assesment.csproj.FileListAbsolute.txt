@@ -33,3 +33,4 @@ C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Soko
 C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Crates\crate_01.png
 C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Crates\crate_02.png
 C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Crates\crate_03.png
+C:\Users\semir\Desktop\Szkoła\HND\Software Development\Week 15 - Assesment\Sokoban Game - Assesment\bin\Debug\net5.0-windows\Assets\Game\Endpoint\endpoint_01.png
